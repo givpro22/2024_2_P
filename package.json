@@ -6,6 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --exec babel-node src/server.js"
   },
+  "repository": {
+    "type": "git",
+    "url":"git+https://github.com/givpro22/2024_2_P"
+  },
+
   "author": "",
   "license": "ISC",
   "description": "",
