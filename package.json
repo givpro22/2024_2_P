@@ -8,14 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url":"git+https://github.com/givpro22/2024_2_P"
+    "url": "git+https://github.com/givpro22/2024_2_P"
   },
-
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
