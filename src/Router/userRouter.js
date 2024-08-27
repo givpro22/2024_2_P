@@ -1,12 +1,11 @@
-const express = require("express")
-import {id, logout, edit, delete1} from "../Controller/userController";
+import express from "express";
+import { edit, remove, logout, see } from "../Controller/userController";
 
-const userRouter = express.Router()
+const userRouter = express.Router();
 
-userRouter.get('/:id', id)
-userRouter.get('/logout', logout)
-userRouter.get('/edit', edit)
-userRouter.get('/delete', delete1)
+userRouter.get("/logout", logout);
+userRouter.get("/edit", edit);
+userRouter.get("/remove", remove);
+userRouter.get(":id", see);
 
-
-export default userRouter
+export default userRouter;

@@ -1,4 +1,6 @@
-export const id = (req,res) => {return res.send("<h1>HI</h1>")}
-export const logout = (req,res) => {return res.send("<h1>HI</h1>")}
-export const edit = (req,res) => {return res.send("<h1>HI</h1>")}
-export const delete1 = (req,res) => {return res.send("<h1>HI</h1>")}
+export const join = (req, res) => res.send("Join");
+export const edit = (req, res) => res.send("Edit User");
+export const remove = (req, res) => res.send("Remove User");
+export const login = (req, res) => res.send("Login");
+export const logout = (req, res) => res.send("Log out");
+export const see = (req, res) => res.send("See User");

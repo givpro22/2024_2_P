@@ -16,9 +16,6 @@ const gossipMiddleware = (req,res, next) => {
     next()
 }
 
-
-
-
 app.set("view engine", "pug")
 app.set("views", process.cwd() + "/src/views")
 app.use(morgan("dev"))

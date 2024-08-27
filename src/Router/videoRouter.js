@@ -1,15 +1,11 @@
-const express = require("express")
-import {trending, watch} from "../Controller/videoController"
+import express from "express";
+import { watch, edit, upload, deleteVideo } from "../Controller/videoController";
 
+const videoRouter = express.Router();
 
-const videoRouter = express.Router()
+videoRouter.get("/:id(\\d+)", watch);
+videoRouter.get("/:id(\\d+)/edit", edit);
+videoRouter.get("/:id(\\d+)/delete", deleteVideo);
+videoRouter.get("/upload", upload);
 
-videoRouter.get('/upload', watch)
-
-videoRouter.get('/', trending)
-videoRouter.get('/:id', trending)
-videoRouter.get('/:id/edit', watch)
-videoRouter.get('/:id/delete', watch)
-
-
-export default videoRouter
+export default videoRouter;
