@@ -19,7 +19,7 @@ const gossipMiddleware = (req,res, next) => {
 app.set("view engine", "pug")
 app.set("views", process.cwd() + "/src/views")
 app.use(morgan("dev"))
-
+app.use( express.urlencoded( {extended: true} ) )
 
 app.use('/', globalRouter)
 app.use("/users", userRouter)
