@@ -1,4 +1,5 @@
-const express = require("express") //import express from "express"
+import express from "express"
+
 const morgan = require("morgan")
 import videoRouter from "./Router/videoRouter" //const videoRouter = require("../Router/videoRouter");
 import userRouter from "./Router/userRouter"
@@ -7,7 +8,6 @@ import globalRouter from "./Router/globalRouter"
 
 const app = express()
 
-const PORT = 4000
 
 
 
@@ -21,11 +21,9 @@ app.set("views", process.cwd() + "/src/views")
 app.use(morgan("dev"))
 app.use( express.urlencoded( {extended: true} ) )
 
+
 app.use('/', globalRouter)
 app.use("/users", userRouter)
 app.use("/videos", videoRouter)
 
-
-app.listen(PORT,function(){
-    console.log(`http://localhost:${PORT}`)
-})
+export default app;
