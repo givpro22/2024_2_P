@@ -1,7 +1,7 @@
 // import관리 할거임
 import "./db"
 import "./models/Video"
-import "./server"
+import app from "./server";
 
 const PORT = 4000;
 
