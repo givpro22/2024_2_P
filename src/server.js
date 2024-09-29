@@ -3,7 +3,7 @@ import express from "express"
 const morgan = require("morgan")
 import videoRouter from "./Router/videoRouter" //const videoRouter = require("../Router/videoRouter");
 import userRouter from "./Router/userRouter"
-import rootRouter from "./Router/rootRouter"
+import globalRouter from "./Router/globalRouter"
 
 
 const app = express()
@@ -22,7 +22,7 @@ app.use(morgan("dev"))
 app.use( express.urlencoded( {extended: true} ) )
 
 
-app.use('/', rootRouter)
+app.use('/', globalRouter)
 app.use("/users", userRouter)
 app.use("/videos", videoRouter)
 
