@@ -1,10 +1,12 @@
-// import관리 할거임
-import "./db"
-import "./models/Video"
+import "dotenv/config";
+import "./db";
+import "./models/Video";
+import "./models/User";
 import app from "./server";
 
 const PORT = 4000;
 
-app.listen(PORT,function(){
-    console.log(`http://localhost:${PORT}`)
-})
+const handleListening = () =>
+  console.log(`✅ Server listenting on http://localhost:${PORT} 🚀`);
+
+app.listen(PORT, handleListening);
